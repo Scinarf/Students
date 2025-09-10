@@ -12,6 +12,7 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @Entity(name = "Students")
 public class Student {
     @Id
@@ -26,6 +27,6 @@ public class Student {
 
     @NotEmpty
     private String studentId;
-    
+
     private int age;
 }
