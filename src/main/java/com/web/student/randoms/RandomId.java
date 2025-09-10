@@ -3,12 +3,12 @@ package com.web.student.randoms;
 import java.util.UUID;
 
 public class RandomId {
-    public String rId(){
-        String id = UUID.randomUUID()
+    public static String rId(){
+
+        return UUID.randomUUID()
+                .toString()
                 .replace("-", "")
                 .substring(0,6)
                 .toUpperCase();
-
-        return id;
     }
 }
