@@ -7,6 +7,8 @@ import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.*;
 
+import static com.web.student.randoms.RandomId.rId;
+
 @Data
 @Getter
 @Setter
@@ -25,8 +27,7 @@ public class Student {
     @NotEmpty
     private String lastName;
 
-    @NotEmpty
-    private String studentId;
+    private String studentId = rId();
 
     private int age;
 }
